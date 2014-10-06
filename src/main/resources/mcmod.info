@@ -1,0 +1,17 @@
+[
+{
+  "modid": "amalgam",
+  "name": "Amalgam Craft",
+  "description": "Amalgam = Hybrid = Mixture!",
+  "version": "1.7.10-1.0.0",
+  "credits": "Thanks to Pahimar for helping me get started.",
+  "logoFile": "",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authors": [ "SlasherXT" ],
+  "parent":"",
+  "screenshots": [],
+  "dependencies": [ "mod_MinecraftForge" ]
+}
+]

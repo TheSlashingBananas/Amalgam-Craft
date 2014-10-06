@@ -1,0 +1,24 @@
+item.amalgam:mixingTool.name=Amalgamerator
+item.amalgam:cron.name=Cron Mixture
+item.amalgam:golal.name=Golal Mixture
+item.amalgam:golon.name=Golon Mixture
+item.amalgam:comond.name=Comond Mixture
+item.amalgam:irmond.name=Irmond Mixture
+item.amalgam:gomond.name=Gomond Mixture
+item.amalgam:emeroal.name=Emeroal Mixture
+item.amalgam:emeron.name=Emeron Mixture
+item.amalgam:emeold.name=Emeold Mixture
+item.amalgam:ememond.name=Ememond Mixture
+item.amalgam:roalstone.name=Roalstone Mixture
+item.amalgam:rirstone.name=Rirstone Mixture
+item.amalgam:rogstone.name=Rogstone Mixture
+item.amalgam:rimstone.name=Rimstone Mixture
+item.amalgam:remstone.name=Remstone Mixture
+item.amalgam:licmis.name=Licmis Mixture
+item.amalgam:lirmis.name=Lirmis Mixture
+item.amalgam:ligmis.name=Ligmis Mixture
+item.amalgam:liamis.name=Liamis Mixture
+item.amalgam:leimis.name=Liemis Mixture
+item.amalgam:rapis.name=Rapis Mixture
+
+itemGroup.amalgam=Amalgam
