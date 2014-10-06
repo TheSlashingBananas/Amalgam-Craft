@@ -4,6 +4,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.CraftingManager;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import net.slasherxt.amalgam.handler.ConfigurationHandler;
@@ -17,6 +18,8 @@ import cpw.mods.fml.common.registry.GameRegistry.ObjectHolder;
 public class ModItems {
 	public static ItemAmalgam mixingTool;
 	public static ItemAmalgamIngot[] ingotMixList;
+	
+	public static Object mixingToolRecipe;
 	
 	public static void preInit() {
 		mixingTool = new ItemAmalgam();
@@ -53,9 +56,9 @@ public class ModItems {
 		//TODO Fix to where don't have dupe recipes..
 		
 		if(ConfigurationHandler.hardMode) {
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(mixingTool), "did", "iii", " s ", 'i', new ItemStack(Items.iron_ingot), 'd', new ItemStack(Items.diamond), 's', new ItemStack(Items.stick)));
+			mixingToolRecipe = GameRegistry.addShapedRecipe(new ItemStack(mixingTool), "did", "iii", " s ", 'i', new ItemStack(Items.iron_ingot), 'd', new ItemStack(Items.diamond), 's', new ItemStack(Items.stick));
 		} else {
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(mixingTool), "ici", "iii", " s ", 'i', new ItemStack(Items.iron_ingot), 'c', new ItemStack(Blocks.cobblestone), 's', new ItemStack(Items.stick)));
+			mixingToolRecipe = GameRegistry.addShapedRecipe(new ItemStack(mixingTool), "ici", "iii", " s ", 'i', new ItemStack(Items.iron_ingot), 'c', new ItemStack(Blocks.cobblestone), 's', new ItemStack(Items.stick));
 		}
 		
 		for(int i=0;i<ingotMixList.length;i++) {
@@ -63,7 +66,7 @@ public class ModItems {
 		}
 	}
 	
-	private static void createOreRecipe(Item output, Item ore1, Item ore2) {
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(output), new ItemStack(ore1), new ItemStack(ore2), new ItemStack(mixingTool)));
+	private static void createOreRecipe(Item output, Item ore1, ItemStack ore2) {
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(output), new ItemStack(ore1), ore2, new ItemStack(mixingTool)));
 	}
 }
